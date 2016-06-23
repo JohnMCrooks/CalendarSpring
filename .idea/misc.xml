@@ -3,6 +3,9 @@
   <component name="Cvs2Configuration">
     <option name="SHOW_CORRUPTED_PROJECT_FILES" value="1" />
   </component>
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>

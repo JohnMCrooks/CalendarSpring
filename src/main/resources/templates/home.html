@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2016.
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Spring</title>
+</head>
+<body>
+
+{{^username}}
+    <form action="/login" method="post">
+        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="password" placeholder="Password" />
+        <button type="submit">Login</button>
+    </form>
+{{/username}}
+
+{{#username}}
+    Hello, {{.}}<br>
+{{/username}}
+
+The Current Time is       <br>
+<form action="/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+
+<br>
+<br>
+<form action="/create-event" method="post">
+    <input type="text" name="description" placeholder="Description" />
+    <input type="datetime-local" name="time" value="{{now}}"/>
+    <button type="submit">Create Event</button>
+</form>
+<br><br><br><br>
+
+{{#events}}
+    <b>{{time}}:</b><br> {{description}}<br><br>
+{{/events}}
+
+
+</body>
+</html>
